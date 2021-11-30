@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Baju_m extends CI_Model {
 
-    var $column_order = array(null, 'kode_barang', 'nama_barang', 'nama_suplier', 'harga', 'jenis', 's' , 'm' , 'l' , 'xl' , 'xxl' , 'xxxl' , 'xxxxl'); //set column field database for datatable orderable
+    var $column_order = array(null, 'kode_barang', 'status', 'nama_barang', 'nama_suplier', 'harga', 'jenis', 's' , 'm' , 'l' , 'xl' , 'xxl' , 'xxxl' , 'xxxxl'); //set column field database for datatable orderable
     var $column_search = array('kode_barang', 'nama_barang', 'harga', 'nama_suplier'); //set column field database for datatable searchable
     var $order = array('id_barang' => 'asc'); // default order
  
@@ -84,6 +84,7 @@ class Baju_m extends CI_Model {
             'kode_barang' => $post['kode_barang'],
             'nama_barang' => $post['nama_barang'],
             'kategori' => $post['kategori'],
+            'status' => $post['status'],
             'id_suplier' => $post['supplier'],
             'harga' => $post['harga'],
             'jenis' => $post['jenis'],
@@ -106,6 +107,7 @@ class Baju_m extends CI_Model {
             'kode_barang' => $post['kode_barang'],
             'nama_barang' => $post['nama_barang'],
             'kategori' => $post['kategori'],
+            'status' => $post['status'],
             'id_suplier' => $post['supplier'],
             'harga' => $post['harga'],
             'jenis' => $post['jenis'],

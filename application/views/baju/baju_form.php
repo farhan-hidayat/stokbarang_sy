@@ -38,6 +38,14 @@
                                             <input type="text" name="kategori" value="Baju" class="form-control" readonly>
                                         </div>
                                         <div class="form-group">
+                                            <label>Status *</label>
+                                            <select name="status" class="form-control">
+                                                <?php $status = $this->input->post('status') ? $this->input->post('status') : $row->status ?>
+                                                <option <?=$status == "Up to date" ? 'selected' : null?>>Up to date</option>
+                                                <option <?=$status == "Selisih" ? 'selected' : null?>>Selisih</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
                                             <label>Nama Barang *</label>
                                             <input type="text" name="nama_barang" value="<?=$row->nama_barang?>" class="form-control" required>
                                         </div>

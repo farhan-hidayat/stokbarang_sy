@@ -18,7 +18,11 @@ class Stok_baju extends CI_Controller {
             $no++;
             $row = array();
             $row[] = $no.".";
-            $row[] = $baju->kode_barang.'<br><a href="'.site_url('barang/barcode_qrcode/'.$baju->id_barang).'" class="btn btn-default btn-xs">Generate <i class="fa fa-barcode"></i></a>';
+            $row[] = $baju->kode_barang.
+            '<br>
+            <a href="'.site_url('baju/edit/'.$baju->id_barang).'" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</a>
+            <br><a href="'.site_url('barang/barcode_qrcode/'.$baju->id_barang).'" class="btn btn-default btn-xs">Generate <i class="fa fa-barcode"></i></a>';
+            $row[] = $baju->status == "Up to date" ? '<span class="bg-green">Up to date</span>' : '<span class="bg-red">Selisih</span>';
             $row[] = $baju->nama_barang;
             $row[] = $baju->nama_suplier;
 			$row[] = $baju->s;

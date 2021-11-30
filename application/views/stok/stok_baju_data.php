@@ -88,6 +88,7 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Kode Barang</th>
+                                        <th>Status</th>
                                         <th>Nama Barang</th>
                                         <th>Nama Suplier</th>
                                         <th>S</th>
@@ -129,6 +130,7 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Kode Barang</th>
+                                        <th>Status</th>
                                         <th>Nama Barang</th>
                                         <th>Nama Suplier</th>
                                         <th>S</th>

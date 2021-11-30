@@ -52,6 +52,7 @@ class Baju extends CI_Controller {
 		$barang->id_barang = null;
 		$barang->nama_barang = null;
 		$barang->kategori = null;
+		$barang->status = null;
         $barang->harga = null;
         $barang->jenis = null;
         $barang->foto = null;
@@ -79,6 +80,7 @@ class Baju extends CI_Controller {
 
 	public function edit($id)
 	{
+		check_admin();
 		$query = $this->baju_m->get($id);
 		if($query->num_rows() > 0) {
 			$barang = $query->row();
